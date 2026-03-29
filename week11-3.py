@@ -1,0 +1,20 @@
+#24331A05E2
+#To design and develop a GUI application using Tkinter Geometry methods pack(),grid(), place().
+import tkinter as tk
+root = tk.Tk()
+root.title("Geometry Demo")
+root.geometry("400x300")
+top_frame = tk.Frame(root, bg="lightpink")
+top_frame.pack(fill="x")
+tk.Label(top_frame, text="PACK Layout", bg="lightpink").pack(pady=5)
+tk.Button(top_frame, text="A").pack(side="left", padx=15, pady=5)
+tk.Button(top_frame, text="B").pack(side="left", padx=15, pady=5)
+middle_frame = tk.Frame(root, bg="lightgray")
+middle_frame.pack(pady=15)
+tk.Label(middle_frame, text="GRID Layout", bg="lightgray").grid(row=0, column=0, columnspan=2)
+tk.Button(middle_frame, text="C").grid(row=1, column=0, padx=10, pady=10)
+tk.Button(middle_frame, text="D").grid(row=1, column=1, padx=10, pady=10)
+tk.Label(root, text="PLACE Layout", bg="lightyellow").place(x=140, y=200)
+tk.Button(root, text="E").place(x=110, y=230)
+tk.Button(root, text="F").place(x=210, y=230)
+root.mainloop()
